@@ -29,7 +29,7 @@ public:
     }
     void draw(sf::RenderWindow& window)
     {
-        m_menu->draw(window);
+        m_menu->draw(window); //Program wychwytuje nieobsłużony wyjątek
     }
     void clickButton()
     {
@@ -103,7 +103,7 @@ public:
     {
         for (auto i : this->buttons)
         {
-            window.draw(i);
+            window.draw(i); //Również tutaj program zauważa, iż nie obsłużono wyjątku
         }
     }
     virtual void clickButton()
